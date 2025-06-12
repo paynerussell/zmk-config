@@ -60,10 +60,10 @@
                 };
                 function {
                         bindings = <
-   &none    &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_CLR       &none  &none        &none       &none       &none         &none
-   &none    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_NXT       &none  &mt RSHFT F  &mt RCTL E  &mt RALT I  &mt RGUI O    &none
-   &none    &kp F10  &kp F1  &kp F2  &kp F3  &none            &none  &none        &none       &none       &none         &none
-                     &kp LPAR  &kp RPAR  &kp UNDER            &none  &none  &mo 4
+   &none    &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_CLR         &none  &none        &none       &none       &none         &none
+   &none    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0       &none  &mt RSHFT F  &mt RCTL E  &mt RALT I  &mt RGUI O    &none
+   &none    &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1       &none  &none        &none       &none       &none         &none
+                         &kp LPAR  &kp RPAR  &kp UNDER          &none  &none  &mo 4
                         >;
                 };
         };
