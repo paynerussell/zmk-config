@@ -27,42 +27,42 @@
 
                 colemak {
                         bindings = <
-   &none    &kp Q &kp W      &kp F      &kp P       &kp B       &kp J &kp L       &kp U      &kp Y      &kp APOS      &none
-   &none    &kp A &mt LGUI R &mt LCTL S &mt LSHFT T &kp G       &kp M &mt RSHFT N &mt RCTL E &mt RALT I &mt RGUI O    &none
-   &none    &kp Z &kp X      &kp C      &kp D       &kp V       &kp K &kp H       &kp COMMA  &kp DOT    &kp FSLH      &none
-                              &kp ESC &lt 1 SPACE &kp TAB       &lt 2 RET &lt 3 BSPC &lt 4 DEL
+   &none    &kp Q       &kp W       &kp F       &kp P        &kp B       &kp J &kp L       &kp U      &kp Y      &kp APOS      &none
+   &none    &mt LGUI A  &mt LALT R  &mt LCTL S  &mt LSHFT T  &kp G       &kp M &mt RSHFT N &mt RCTL E &mt RALT I &mt RGUI O    &none
+   &none    &kp Z       &kp X       &kp C       &kp D        &kp V       &kp K &kp H       &kp COMMA  &kp DOT    &kp FSLH      &none
+                                        &kp ESC &lt 1 SPACE &kp TAB      &lt 2 RET &lt 3 BSPC &lt 4 DEL
                         >;
                 };
                 navigation {
                         bindings = <
-   &none    &none  &none       &none       &none        &none        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(U)  &kp LC(R)     &none
-   &none    &none  &mt LGUI R  &mt LCTL S  &mt LSHFT T  &none        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &caps_word    &none
-   &none    &none  &none       &none       &none        &none        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp INS       &none
-                                          &none  &mo 1  &none        &kp RET  &kp BSPC  &kp DEL
+   &none    &none     &none     &none     &none      &none        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(U)  &kp LC(R)     &none
+   &none    &kp LGUI  &kp LALT  &kp LCTL  &kp LSHFT  &none        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &caps_word    &none
+   &none    &none     &none     &none     &none      &none        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp INS       &none
+                                       &none  &mo 1  &none        &kp RET  &kp BSPC  &kp DEL
                         >;
                 };
 
                 symbol {
                         bindings = <
-   &none    &kp LBRC   &kp AMPS    &kp STAR    &kp LPAR     &kp RBRC        &none  &none        &none       &none       &none         &none
-   &none    &kp COLON  &kp DLLR    &kp PRCNT   &kp CARET    &kp PLUS        &none  &mt RSHFT N  &mt RCTL E  &mt RALT I  &mt RGUI O    &none
-   &none    &kp TILDE  &kp EXCL    &kp AT      &kp HASH     &kp PIPE        &none  &none        &none       &none       &none         &none
-                                       &kp LPAR  &kp RPAR  &kp UNDER        &mo 2  &none  &none
+   &none    &kp LBRC   &kp AMPS    &kp STAR    &kp LPAR     &kp RBRC        &none  &none      &none     &none     &none        &none
+   &none    &kp COLON  &kp DLLR    &kp PRCNT   &kp CARET    &kp PLUS        &none  &kp RSHFT  &kp RCTL  &kp RALT  &kp RGUI     &none
+   &none    &kp TILDE  &kp EXCL    &kp AT      &kp HASH     &kp PIPE        &none  &none      &none     &none     &none        &none
+                                        &kp LPAR  &kp RPAR  &kp UNDER       &mo 2  &none  &none
                         >;
                 };
                 number {
                         bindings = <
-   &none    &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT        &none  &none        &none       &none       &none         &none
-   &none    &kp SEMI   &kp N4  &kp N5  &kp N6  &kp PLUS        &none  &mt RSHFT N  &mt RCTL E  &mt RALT I  &mt RGUI O    &none
-   &none    &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH        &none  &none        &none       &none       &none         &none
+   &none    &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT        &none  &none      &none     &none     &none       &none
+   &none    &kp SEMI   &kp N4  &kp N5  &kp N6  &kp PLUS        &none  &kp RSHFT  &kp RCTL  &kp RALT  &kp RGUI    &none
+   &none    &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH        &none  &none      &none     &none     &none       &none
                              &kp DOT  &kp N0  &kp MINUS        &none  &mo 3  &none
                         >;
                 };
                 function {
                         bindings = <
-   &none    &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_CLR         &none  &none        &none       &none       &none         &none
-   &none    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0       &none  &mt RSHFT F  &mt RCTL E  &mt RALT I  &mt RGUI O    &none
-   &none    &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1       &none  &none        &none       &none       &none         &none
+   &none    &kp F12  &kp F7  &kp F8  &kp F9  &bt BT_CLR         &none  &none      &none     &none     &none       &none
+   &none    &kp F11  &kp F4  &kp F5  &kp F6  &bt BT_SEL 0       &none  &kp RSHFT  &kp RCTL  &kp RALT  &kp RGUI    &none
+   &none    &kp F10  &kp F1  &kp F2  &kp F3  &bt BT_SEL 1       &none  &none      &none     &none     &none       &none
                          &kp LPAR  &kp RPAR  &kp UNDER          &none  &none  &mo 4
                         >;
                 };
