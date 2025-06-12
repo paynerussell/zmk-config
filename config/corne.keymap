@@ -12,44 +12,45 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+                colemak {
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &none    &kp Q &kp W      &kp F      &kp P       &kp B       &kp J &kp L       &kp U      &kp Y      &kp APOS      &none
+   &none    &kp a &mt LGUI r &mt LCTL s &mt LSHFT t &kp g       &kp m &mt RSHFT n &mt RCTL e &mt RALT i &mt RGUI o    &none
+   &none    &kp Z &kp X      &kp C      &kp D       &kp V       &kp N &kp M       &kp COMMA  &kp DOT    &kp FSLH      &none
+                              &kp ESC &lt 1 SPACE &kp TAB       &lt 2 RET &lt 3 BSPC &lt 4 DEL
                         >;
                 };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                navigation {
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &none    &none  &none       &none       &none        &none        &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(U)  &kp LC(R)     &none
+   &none    &none  &mt LGUI r  &mt LCTL s  &mt LSHFT t  &kp g        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &caps_word    &none
+   &none    &none  &none       &none       &none        &none        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp INS       &none
+                                          &none  &mo 1  &none        &kp RET  &kp BSPC  &kp DEL
                         >;
                 };
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                symbol {
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &none    &kp LBRC   &kp AMPS    &kp STAR    &kp LPAR     &kp RBRC        &none  &none        &none       &none       &none         &none
+   &none    &kp COLON  &kp DLLR    &kp PRCNT   &kp CARET    &kp PLUS        &none  &mt RSHFT n  &mt RCTL e  &mt RALT i  &mt RGUI o    &none
+   &none    &kp TILDE  &kp EXCL    &kp AT      &kp HASH     &kp PIPE        &none  &none        &none       &none       &none         &none
+                                       &kp LPAR  &kp RPAR  &kp UNDER        &mo 2  &none  &none
+                        >;
+                };
+                number {
+                        bindings = <
+   &none    &kp LBKT   &kp N7  &kp N8  &kp N9  &kp RBKT        &none  &none        &none       &none       &none         &none
+   &none    &kp SEMI   &kp N4  &kp N5  &kp N6  &kp PLUS        &none  &mt RSHFT n  &mt RCTL e  &mt RALT i  &mt RGUI o    &none
+   &none    &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp BSLH        &none  &none        &none       &none       &none         &none
+                             &kp DOT  &kp N0  &kp MINUS        &none  &mo 3  &none
+                        >;
+                };
+                function {
+                        bindings = <
+   &none    &kp F12  &kp F7  &kp F8  &kp F9  &none        &none  &none        &none       &none       &none         &none
+   &none    &kp F11  &kp F4  &kp F5  &kp F6  &none        &none  &mt RSHFT n  &mt RCTL e  &mt RALT i  &mt RGUI o    &none
+   &none    &kp F10  &kp F1  &kp F2  &kp F3  &none        &none  &none        &none       &none       &none         &none
+                     &kp LPAR  &kp RPAR  &kp UNDER        &none  &none  &mo 4
                         >;
                 };
         };
